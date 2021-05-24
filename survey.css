@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url('mountain.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Cabin', sans-serif;
+    font-size: x-large;
+}
+.main-body {
+    padding: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 60%;
+    margin-left: 20%;
+    align-items: center;
+    background-color: rgb(255, 255, 255, 0.85);
+}
+a {
+    text-decoration: none !important;
+    color: rgb(117, 21, 207);
+}
+
+a:hover {
+    color: rgb(81, 16, 143);
+}
+
+label {
+    font-size: medium;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+    font-size: 70px;
+    color: rgb(117, 21, 207);
+}
+
+img {
+    width: 70%;
+    height: 20%;
+    margin-left: 15%;
+    margin-bottom: 20px;
+}
+
+.rating {
+    display: flex;
+    margin-left: 30%;
+}
+
+.rating-text {
+    padding-top: 5px;
+}
+
+.cars-select {
+    width: 200px;
+    height: 30px;
+    margin-left: 30px;
+    border-radius: 7px;
+}
+
+.car-preference {
+    margin-left: 30px;
+    width: 400px;
+    height: 30px;
+    border-radius: 7px;
+    border-width: thin;
+}
+
+.add-comments {
+    margin-left: 30px;
+    width: 400px;
+    height: 150px;
+    border-radius: 7px;
+    border-width: thin;
+}
+
+.items {
+    margin-left: 30px;
+}
+
+.submit {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submit > input{
+    width: 300px;
+    height: 60px;
+    border-radius: 15px;
+    font-size: x-large;
+    color: white;
+    background-color: rgb(117, 21, 207);
+}
+
+.submit > input:hover{
+    background-color: rgb(81, 16, 143);
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 200px;
+    font-size: small;
+    align-self: flex-end;
+}
+
+
+/* Rating stars */
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:black;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
