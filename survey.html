@@ -7,8 +7,77 @@
     <title>Survey</title>
 </head>
 <body>
-    <h1>Best Electrical Vehicle Survey</h1>
+    <h1>Best Vehicle Survey</h1>
     <p>Before we get started, please check the UI of <a href="https://www.topgear.com" target="_blank" rel="noopener noreferrer">Top Gear</a> Official website for comparision purposes</p>
     <img src="topgear.png" alt="top gear">
+    <form>
+        <p><strong>Choose your most prefered type of transportation:</strong> <br>
+            <label for="Train">
+                <input type="radio" name="transport" value="Train">Train
+            </label> <br>
+            <label for="Bus">
+                <input type="radio" name="transport" value="Bus">Bus
+            </label><br>
+            <label for="Car">
+                <input type="radio" name="transport" value="Car">Car
+            </label><br>
+            <label for="Bicycle">
+                <input type="radio" name="transport" value="Bicycle">Bicycle
+            </label><br>
+            <label for="Motocycle">
+                <input type="radio" name="transport" value="Motocycle">Motocycle
+            </label><br>
+        </p>
+
+        <p>
+            <label for="cars"><strong>If you want to buy a car, what type do you prefer?</strong><br></label>
+            <select name="cars" id="cars">
+                <option value="Gas">Gas</option>
+                <option value="Electric">Electric</option>
+                <option value="Hybrid">Hybrid</option>
+            </select>
+        </p>
+
+        <label for="question"><strong>Why do you prefer this type of vehicles that you selected above?</strong> <br>
+            <input type="text">
+        </label>
+
+        <p>
+            <strong>Among these car manifactures, which one do you think is best? (Select one or more)</strong><br>
+            <label>
+                <input type="checkbox" name="carsliked" value="vw">
+                Volkswagen <br>
+            </label>
+            <label>
+                <input type="checkbox" name="carsliked" value="toyo">
+                Toyota <br>
+            </label>
+            <label>
+                <input type="checkbox" name="carsliked" value="hon">
+                Honda <br>
+            </label>
+            <label>
+                <input type="checkbox" name="carsliked" value="ford">
+                Ford <br>
+            </label>
+            <label>
+                <input type="checkbox" name="carsliked" value="tesla">
+                Tesla <br>
+            </label>
+            <label>
+                <input type="checkbox" name="carsliked" value="mazda">
+                Mazda <br>
+            </label>
+        </p>
+
+        <p>
+            <strong>If you have additional comments:</strong><br>
+            <textarea name="comments" cols="30" rows="10">Enter Comments Here</textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Submit Your Survey">
+        </p>
+    </form>
 </body>
 </html>
