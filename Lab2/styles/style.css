@@ -1,10 +1,15 @@
 /* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 /* Style the tab */
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+  font-family: 'Cabin', sans-serif;
+  font-size: x-large;
+  border-radius: 5px;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -34,4 +39,53 @@
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+  background-color: rgb(255, 255, 255, 0.85);
+  border-radius: 5px;
+}
+
+body {
+  width: 60%;
+  margin-left: 20%;
+  background-image: url('shop.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Cabin', sans-serif;
+  font-size: x-large;
+}
+
+.tab > button {
+  font-family: 'Cabin', sans-serif;
+  font-size: x-large;
+}
+
+#displayProduct {
+  font-size: medium;
+  color: rgb(78, 78, 78);
+}
+
+.organic > label {
+  font-size: medium;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+#dietSelect {
+  width: 200px;
+  height: 25px;
+}
+
+#addCart {
+  width: 270px;
+  height: 35px;
+  font-size: medium;
+  background-color: grey;
+  color: white;
+  border-radius: 7px;
+}
+
+#addCart:hover {
+  cursor: pointer;
+  background-color: rgb(73, 73, 73);
 }
