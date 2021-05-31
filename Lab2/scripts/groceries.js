@@ -102,36 +102,41 @@ var products = [
 // prices should be included in this list, as well as a sort based on price
 
 function restrictListProducts(prods, restriction, organic) {
-	let product_names = [];
+	let product_names = new Map();
 	for (let i=0; i<prods.length; i+=1) {
 		if ((organic == true) && (prods[i].organic == true)) {
 			if ((restriction == "Both Restrictions") && !prods[i].containLactose && !prods[i].containNuts) {
-				product_names.push(prods[i].name);
+				product_names.set(prods[i].name, prods[i].price);
 			}
 			else if ((restriction == "Lactose Free") && !prods[i].containLactose){
-				product_names.push(prods[i].name);
+				product_names.set(prods[i].name, prods[i].price);
 			}
 			else if ((restriction == "Nuts Free") && !prods[i].containNuts){
-				product_names.push(prods[i].name);
+				product_names.set(prods[i].name, prods[i].price);
 			}
 			else if (restriction == "No Restrictions"){
-				product_names.push(prods[i].name);
+				product_names.set(prods[i].name, prods[i].price);
 			}
 		} else if((organic == false) && (prods[i].organic == false)){
 			if ((restriction == "Both Restrictions") && !prods[i].containLactose && !prods[i].containNuts) {
-				product_names.push(prods[i].name);
+				product_names.set(prods[i].name, prods[i].price);
 			}
 			else if ((restriction == "Lactose Free") && !prods[i].containLactose){
-				product_names.push(prods[i].name);
+				product_names.set(prods[i].name, prods[i].price);
 			}
 			else if ((restriction == "Nuts Free") && !prods[i].containNuts){
-				product_names.push(prods[i].name);
+				product_names.set(prods[i].name, prods[i].price);
 			}
 			else if (restriction == "No Restrictions"){
-				product_names.push(prods[i].name);
+				product_names.set(prods[i].name, prods[i].price);
 			}
 		}
 	}
+
+	product_names[Symbol.iterator] = function* () {
+		yield* [...this.entries()].sort((a, b) => a[1] - b[1]);
+	}
+
 	return product_names;
 }
 

@@ -40,9 +40,9 @@ function populateListProductChoices(slct1, slct2, org) {
 	// <input type="checkbox" name="product" value="Bread">
 	// <label for="Bread">Bread/label><br>
 		
-	for (i = 0; i < optionArray.length; i++) {
+	for (let [key, value] of optionArray) {
 			
-		var productName = optionArray[i];
+		var productName = key;
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
@@ -53,7 +53,7 @@ function populateListProductChoices(slct1, slct2, org) {
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
 		label.htmlFor = productName;
-		label.appendChild(document.createTextNode(productName));
+		label.appendChild(document.createTextNode( productName + ' for $' + value));
 		s2.appendChild(label);
 		
 		// create a breakline node and add in HTML DOM
@@ -87,7 +87,7 @@ function selectedItems(){
 		
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is " + Math.round(getTotalPrice(chosenProducts)*100)/100));
+	c.appendChild(document.createTextNode("Total Price is $" + Math.round(getTotalPrice(chosenProducts)*100)/100));
 		
 }
 
