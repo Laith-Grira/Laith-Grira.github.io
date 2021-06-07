@@ -89,3 +89,15 @@ h3 {
   cursor: pointer;
   background-color: rgb(73, 73, 73);
 }
+
+footer {
+  top: 1500px;
+  font-size: large;
+  color: rgb(17, 17, 17);
+  align-self: flex-end;
+}
+
+.title > img {
+  height: 200px;
+  width: 100%;
+}
