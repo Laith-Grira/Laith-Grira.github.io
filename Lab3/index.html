@@ -11,12 +11,11 @@
   <div class="title">
     <img src="./styles/carrefour-logo-1.png" alt="carrefour">
   </div>
-
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="tab">
-  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
-  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+  <button class="tablinks tab1" onclick="openInfo(event, 'Client')" id="pointer1">Client</button>
+  <button class="tablinks tab2" onclick="openInfo(event, 'Products')" id="pointer">Products</button>
+  <button class="tablinks tab3" onclick="openInfo(event, 'Cart')" id="pointer">Cart</button>
 </div>
 
 <!-- Tab content -->
@@ -27,7 +26,7 @@
     <div class="selection">
       <strong>Choose a Category:</strong><br>
       <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct', null)">
-      <option value=""></option>
+      <option value="" disabled selected hidden>Select Here</option>
       <option value="Lactose Free">Lactose Free</option>
       <option value="Nuts Free">Nuts Free</option>
       <option value="Both Restrictions">Both Restrictions</option>
@@ -47,18 +46,17 @@
 </div>
 
 <div id="Products" class="tabcontent">
-  <h3>Your targeted products</h3>
+  <h3>Products for you</h3>
   <p>We preselected products based on your restrictions.</p>
-	 Choose items to buy:
+	 Choose items:
 	 <div id="displayProduct"></div>
 	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
-		Add selected items to cart.
+		Add
 	</button>
 </div>
 
 <div id="Cart" class="tabcontent">
   <h3>Cart</h3>
-  <p>Here is your cart.</p>
   <div id="displayCart"></div>
 </div>
 

@@ -5,11 +5,11 @@
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  background-color: transparent;
   font-family: 'Cabin', sans-serif;
   font-size: x-large;
   border-radius: 5px;
+  margin-bottom: 30px;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -20,7 +20,6 @@
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  transition: 0.3s;
 }
 
 /* Change background color of buttons on hover */
@@ -77,23 +76,25 @@ h3 {
 }
 
 #addCart {
-  width: 270px;
-  height: 35px;
-  font-size: medium;
-  background-color: grey;
+  width: 200px;
+  height: 55px;
+  font-size: large;
+  background-color: #254F9A;
   color: white;
   border-radius: 7px;
+  margin-top: 50px;
+  margin-left: 40%;
 }
 
 #addCart:hover {
   cursor: pointer;
-  background-color: rgb(73, 73, 73);
+  background-color: #153772;
 }
 
 footer {
   top: 1500px;
   font-size: large;
-  color: rgb(17, 17, 17);
+  color: #254F9A;
   align-self: flex-end;
 }
 
@@ -106,4 +107,121 @@ footer {
   .title > img {
     height: 90px;
   }
+}
+
+@media screen and (min-width:500px) and (max-width: 800px){
+  #addCart {
+    margin-left: 10%;
+  }
+}
+
+#dietSelect {
+  width: 250px;
+  height: 35px;
+  border-radius: 6px;
+  font-size: 20px;
+}
+
+#dietSelect:hover {
+  cursor: pointer;
+}
+
+
+/* Pointer*/
+#pointer {
+  width: 200px;
+  height: 60px;
+  position: relative;
+  background: #1f50a7;
+  margin-right: 3px;
+  color: white;
+}
+#pointer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 30px solid red;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+}
+#pointer::before {
+  
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 30px solid #1f50a7;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+}
+
+
+.tab1 {
+  z-index: 4;
+}
+
+.tab2 {
+  z-index: 3;
+}
+
+.tab3 {
+  z-index: 2;
+}
+
+#pointer1 {
+  width: 200px;
+  height: 60px;
+  position: relative;
+  background: #1f50a7;
+  margin-right: 3px;
+  color: white;
+}
+#pointer1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 30px solid #1f50a7;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+}
+#pointer1::before {
+  
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 30px solid #1f50a7;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+}
+
+#pointer:active,
+#pointer:focus,
+#pointer1:active,
+#pointer1:focus {
+  background: #153772;
+}
+
+#pointer:focus::before,
+#pointer1:focus::before,
+#pointer1:focus::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 30px solid #153772;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
 }
