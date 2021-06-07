@@ -101,3 +101,9 @@ footer {
   height: 150px;
   width: 100%;
 }
+
+@media screen and (max-width:500px) {
+  .title > img {
+    height: 90px;
+  }
+}
