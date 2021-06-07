@@ -35,11 +35,13 @@
       </select>
     </div><br>
     <div class="organic">
-      <strong>Do you want our organic products?</strong><br>
+      <strong>Do you want Organic or Non-Organic food?</strong><br>
       <input type="radio" id="yes-organic" name="organic" value="yes-organic" onchange="populateListProductChoices('dietSelect', 'displayProduct', changeOrganicValue(true))">
-      <label for="male">Yes</label><br>
-      <input type="radio" id="not-organic" name="organic" value="not-organic" checked onchange="populateListProductChoices('dietSelect', 'displayProduct', changeOrganicValue(false))">
-      <label for="female">No</label><br>
+      <label for="male">Organic</label><br>
+      <input type="radio" id="not-organic" name="organic" value="not-organic" onchange="populateListProductChoices('dietSelect', 'displayProduct', changeOrganicValue(false))">
+      <label for="female">Non-Organic</label><br>
+      <input type="radio" id="any-type" name="organic" value="any-type" checked onchange="populateListProductChoices('dietSelect', 'displayProduct', null)">
+      <label for="female">Any Type</label><br>
     </div>
   </form>
 </div>

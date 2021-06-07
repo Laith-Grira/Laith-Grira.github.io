@@ -130,6 +130,19 @@ function restrictListProducts(prods, restriction, organic) {
 			else if (restriction == "No Restrictions"){
 				product_names.set(prods[i].name, prods[i].price);
 			}
+		} else if((organic == null)){
+			if ((restriction == "Both Restrictions") && !prods[i].containLactose && !prods[i].containNuts) {
+				product_names.set(prods[i].name, prods[i].price);
+			}
+			else if ((restriction == "Lactose Free") && !prods[i].containLactose){
+				product_names.set(prods[i].name, prods[i].price);
+			}
+			else if ((restriction == "Nuts Free") && !prods[i].containNuts){
+				product_names.set(prods[i].name, prods[i].price);
+			}
+			else if (restriction == "No Restrictions"){
+				product_names.set(prods[i].name, prods[i].price);
+			}
 		}
 	}
 
