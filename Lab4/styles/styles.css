@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+    font-family: 'Comfortaa';
+}
+
 td{
     font-size: 25px;
 }
@@ -9,7 +16,8 @@ p{
     margin-bottom: 10px;
 }
 footer {
-    background-color: black;
+    background-color: rgb(2, 2, 71);
+    border-top: 4px solid goldenrod;
     color: aliceblue;
 }
 .location {
@@ -35,25 +43,34 @@ footer {
 
 
 #copyrights {
-    background-color: gray;
-    border-top: 4px solid brown;
+    background-color: rgb(0, 0, 22);
+    color: goldenrod;
+    border-top: 4px solid goldenrod;
 }
 
 .quick-contact > form > input {
     width: 250px;
     height: 30px;
     border-radius: 3px;
-    border: 1px solid white;
+    border: 1px solid goldenrod;
     color: aliceblue;
-    background-color: rgb(70, 70, 70);
+    background-color: rgb(0, 0, 22);
 }
 
 .quick-contact > form > textarea {
     width: 250px;
     border-radius: 3px;
-    border: 1px solid white;
+    border: 1px solid goldenrod;
     color: aliceblue;
-    background-color: rgb(70, 70, 70);
+    background-color: rgb(0, 0, 22);
+}
+
+.quick-contact > form > input::placeholder {
+    color: aliceblue;
+}
+
+.quick-contact > form > textarea::placeholder {
+    color: aliceblue;
 }
 
 @media screen and (max-width:500px) {
@@ -66,4 +83,52 @@ footer {
         margin-right: 0px;
         margin-bottom: 50px;
     }
+}
+
+.booking {
+    background-color: rgba(218, 165, 32, 0.062);
+    padding: 20px;
+}
+
+.date, .personal, .pet-info, .selection {
+    margin-left: 30px;
+}
+
+.items {
+    margin-left: 30px;
+}
+
+.pet-info > .items > input,
+ .personal > .items > input,
+ .date > .items > input {
+    width: 250px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid rgb(2, 2, 71);
+    color: rgb(2, 2, 71);
+}
+
+.navbar {
+    background-color: rgb(2, 2, 71);
+    width: 100%;
+    border-bottom: 4px solid goldenrod;
+}
+
+.navbar > h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 60px;
+}
+
+.submit {
+    margin-left: 100px;
+    width: 150px;
+    height: 40px;
+    font-size: large;
+    color: goldenrod;
+    background-color: rgb(2, 2, 71);
+}
+
+.submit:hover {
+    background-color: goldenrod;
+    color: rgb(2, 2, 71);
 }

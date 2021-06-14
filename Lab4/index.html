@@ -28,11 +28,11 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     https://getbootstrap.com/docs/5.0/components/navbar/
     -->
 
-    <nav class="navbar bg-dark text-white p-3 my-3 ">
+    <nav class="navbar text-white p-3 my-3 mb-5">
         <h1><img src="images/MascotasLogo.png" width="130" height="130"> Welcome to Mascotas Veterinary Clinic</h1>
     </nav>
 
-    <div class=" p-3 my-3 border bg-light">
+    <div class=" p-3 my-3 border bg-light mb-5">
         <h1 class=""> About us</h1>
         <p class="description my-3" style="font-size: 25px">
             At Mascotas Veterinary Clinic, our approach to canine veterinary medicine revolves around a comprehensive, 
@@ -44,7 +44,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
         </p>
         <p class="description my-3" style="font-size: 25px">
             Through good communication and trust we have built so many great relationships with our clients which 
-            allow us to partner with our clients to provide the best care for their dog. 
+            allow us to partner with our clients to provide the best care for their pet. 
         </p>
     </div>
     <!--
@@ -53,8 +53,8 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     https://getbootstrap.com/docs/5.0/content/tables/
     -->
 
-    <h1 class="mb-3">Summary of Our Services</h1>
-    <table class="table table-info table-hover">
+    <h1 class="mt-3 mb-3">Summary of Our Services</h1>
+    <table class="table table-primary table-hover">
         <thead>
             <tr>
                 <th scope="col"><h2>Service</h2></th>
@@ -112,66 +112,65 @@ Many websites will use what is called CSS grid layouts, where you will have a he
             </tr>
         </tbody>
     </table>
-    <h1>Here is an alert!</h1>
-    <!-- Alerts are an easy way to grab the users attention, this page goes into more detail
-    https://getbootstrap.com/docs/5.0/components/alerts/
-    -->
-    <p>This indicated something important in the page</p>
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Yikes!</strong> Perhaps you left one of the fields empty for this to appear?
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
 
-    <h1>Button States</h1>
-    <!--
-    Buttons can be used for submitting forms, triggering events among many other things.
-    https://getbootstrap.com/docs/5.0/components/buttons/
-    -->
-
-    <button type="button" class="btn btn-warning">Primary Button</button>
-    <button type="button" class="btn btn-warning active">Active Button</button>
-    <button type="button" class="btn btn-warning" disabled>Disabled Button</button>
-
-    <h1>Modal Example</h1>
-
-    <!-- Button trigger modal
-    We use the same button code from above, but now we can trigger a modal to appear.
-    The bootstrap tutorial includes many different types of modals that you can explore
-    https://getbootstrap.com/docs/5.0/components/modal/
-    -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    In the body we can add various components. In this example some radio buttons
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Yes
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                        <label class="form-check-label" for="flexRadioDefault2">
-                            No
-                        </label>
+    <div class="booking mb-5">
+        <h1>Book For A Vet Meeting</h1>
+        <form action="/">
+              <div class="selection">
+                <div>
+                <h3>Choose one or more services</h3>
+                    <div class="items">
+                        <input type="checkbox" id="1">
+                        <label> Dental Care</label><br>
+                        <input type="checkbox" id="2">
+                        <label> Cardiology</label><br>
+                        <input type="checkbox" id="3">
+                        <label> Pregnancy</label><br>
+                        <input type="checkbox" id="4">
+                        <label> Vaccinations</label><br>
+                        <input type="checkbox" id="5">
+                        <label> Laser Therapy</label><br>
+                        <input type="checkbox" id="6">
+                        <label> Allergy Testing</label><br>
+                        <input type="checkbox" id="7">
+                        <label> Dermatology</label><br>
+                        <input type="checkbox" id="8">
+                        <label> Microchip ID</label><br>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+              </div><br>
+
+            
+            <div class="date mb-3">
+                <h3>Choose A Date</h3>
+                <div class="items">
+                    <input type="datetime-local" id="start">
                 </div>
             </div>
-        </div>
+
+            
+            <div class="personal mb-3">
+                <h3>Personl Information</h3>
+                <div class="items">
+                    <input type="text" placeholder="First Name" class="mb-2"><br>
+                <input type="text" placeholder="Last Name" class="mb-2"><br>
+                <input type="text" placeholder="Email Address" class="mb-2"><br>
+                </div>
+            </div>
+
+            
+            <div class="pet-info">
+                <h3>Pet's Information</h3>
+                <div class="items">
+                    <input type="text" placeholder="Name" class="mb-2"><br>
+                    <input type="number" placeholder="Age" class="mb-2" min="0" max="1000"><br>
+                </div>
+            </div>
+
+            <div class="submit-info mt-5">
+                <button type="button" class="btn btn-secondary submit">Book</button>
+            </div>
+        </form>
     </div>
 
     <!-- Cards are quite useful when building a website. They are a useful way to organize information.
@@ -179,7 +178,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     https://getbootstrap.com/docs/5.0/components/card/
     -->
 
-    <h1>Meet the Physicians!</h1>
+    <h1>Meet Our Doctors!</h1>
     <div class="row justify-content-around">
         <div class="card" style="width: 18rem;">
             <img src="images/lauren.jpg" class="card-img-top" alt="..."width="130" height="200">
@@ -203,59 +202,6 @@ Many websites will use what is called CSS grid layouts, where you will have a he
             <img src="images/maria.jpg" class="card-img-top" alt="..." width="130" height="200">
             <div class="card-body">
                 <p class="card-text"><strong>Dr. Maria</strong>, our obstetrician for more than 8 years now</p>
-            </div>
-        </div>
-    </div>
-
-    <!--
-    We can also use buttons to expand some hidden options
-    https://getbootstrap.com/docs/5.0/components/collapse/
-    -->
-    <h1>More Information</h1>
-
-    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-        Button To Expand Options
-    </button>
-
-    <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-            Here we have some hidden data to avoid cluttering the page with information
-        </div>
-    </div>
-
-    <!-- This example is using what is called an accordian, this is one of three examples
-    https://getbootstrap.com/docs/5.0/components/accordion/
-    -->
-
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    Accordion Item #1
-                </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">I can put information in this area</div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    Accordion Item #2
-                </button>
-            </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">I can put information in this area</div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    Accordion Item #3
-                </button>
-            </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">I can place information in this area</div>
             </div>
         </div>
     </div>
