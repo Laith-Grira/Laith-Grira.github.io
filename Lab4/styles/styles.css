@@ -8,3 +8,57 @@ p{
     margin-top: 10px;
     margin-bottom: 10px;
 }
+footer {
+    background-color: black;
+    color: aliceblue;
+}
+.location {
+    margin-right: 200px;
+}
+
+.location > p {
+    font-size: large;
+}
+
+.location-info  > ul > li {
+    font-size: medium;
+}
+
+.location-info {
+    list-style-type: none;
+}
+
+
+#copyrights {
+    background-color: gray;
+    border-top: 4px solid brown;
+}
+
+.quick-contact > form > input {
+    width: 250px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid white;
+    color: aliceblue;
+    background-color: rgb(70, 70, 70);
+}
+
+.quick-contact > form > textarea {
+    width: 250px;
+    border-radius: 3px;
+    border: 1px solid white;
+    color: aliceblue;
+    background-color: rgb(70, 70, 70);
+}
+
+@media screen and (max-width:500px) {
+    footer {
+        flex-wrap: wrap;
+        display: flex  !important;
+        justify-content: flex-start !important;
+    }
+    .location {
+        margin-right: 0px;
+        margin-bottom: 50px;
+    }
+}
