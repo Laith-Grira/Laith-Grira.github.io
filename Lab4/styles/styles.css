@@ -16,6 +16,11 @@ footer {
     margin-right: 200px;
 }
 
+.description {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
 .location > p {
     font-size: large;
 }
