@@ -1,0 +1,238 @@
+<!doctype html>
+<!-- Here is a link to the code the documents this code is based on
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
+This will help you get started with your code!
+links: https://www.prestigeanimalhospital.com/services/dogs
+-->
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="images/MascotasLogo.png">
+    <title>Mascotas Veterinary Clinic</title>
+</head>
+<body>
+<!--
+I store all of the page information in a container,
+Many websites will use what is called CSS grid layouts, where you will have a header, body, footer and both sides used for ads or other information
+-->
+<div class = "container-lg">
+
+    <!--
+    Most websites now feature what is called a NavBar.
+    The example I give is quite simple with a logo and some text, but you can use it for many navigational patterns
+    https://getbootstrap.com/docs/5.0/components/navbar/
+    -->
+
+    <nav class="navbar text-white p-3 my-3 mb-5">
+        <h1><img src="images/MascotasLogo.png" width="130" height="130"> Welcome to Mascotas Veterinary Clinic</h1>
+    </nav>
+
+    <div class=" p-3 my-3 border bg-light mb-5">
+        <h1 class=""> About us</h1>
+        <p class="description my-3" style="font-size: 25px">
+            At Mascotas Veterinary Clinic, our approach to canine veterinary medicine revolves around a comprehensive, 
+            competent and compassionate care program, aimed at ensuring the highest quality of life for your pet. 
+        </p>
+        <p class="description my-3" style="font-size: 25px">
+            Perhaps the greatest measure of our success is found in our many happy patients and kind words from our 
+            clients. We value the long term relationship we have with many of our clients.
+        </p>
+        <p class="description my-3" style="font-size: 25px">
+            Through good communication and trust we have built so many great relationships with our clients which 
+            allow us to partner with our clients to provide the best care for their pet. 
+        </p>
+    </div>
+    <!--
+    Tables are one of many ways to organize information easily.
+    It is a good way to list of prices, or services in a business website
+    https://getbootstrap.com/docs/5.0/content/tables/
+    -->
+
+    <h1 class="mt-3 mb-3">Summary of Our Services</h1>
+    <table class="table table-primary table-hover">
+        <thead>
+            <tr>
+                <th scope="col"><h2>Service</h2></th>
+                <th scope="col"><h2>Description</h2></th>
+                <th scope="col"><h2>Price</h2></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dental Care</td>
+                <td>Our knowledge and dental experience can help prevent and treat</br>
+                    your pet's dental conditions, including periodontal disease</td>
+                <td>$35</td>
+            </tr>
+            <tr>
+                <td>Cardiology</td>
+                <td>Our first rate facilities, equipment and professional knowledge gets</br>
+                    to the heart of your pet's health and wellness matters</td>
+                <td>$50</td>
+            </tr>
+            <tr>
+                <td>Pregnancy</td>
+                <td>Our extensive experience can help your pet have a successful pregnancy,</br>
+                    well as a happy, healthy litter of puppies</td>
+                <td>$90</td>
+            </tr>
+            <tr>
+                <td>Vaccinations</td>
+                <td>Our veterinarians and techs will customize vaccination protocols that account</br>
+                    for your pet's age, medical history, environment, travel habits and lifestyle</td>
+                <td>$25</td>
+            </tr>
+            <tr>
+                <td>Laser Therapy</td>
+                <td>We are able to customize our pain protocols to include laser for arthritis, </br>
+                    other inflammatory conditions and post operative pain control</td>
+                <td>$130</td>
+            </tr>
+            <tr>
+                <td>Allergy Testing</td>
+                <td>While not usually life threatening, allergies in pets do cause discomfort</br>
+                    and should be treated</td>
+                <td>$20</td>
+            </tr>
+            <tr>
+                <td>Dermatology</td>
+                <td> Our expertise means diagnosing and treating your pet's skin conditions</br>
+                    before they become something more than skin deep</td>
+                <td>$55</td>
+            </tr><tr>
+                <td>Microchip ID</td>
+                <td>Our professional microchip ID services can help identify your pet in case</br>
+                    he or she ever gets lost, stolen or separated from you</td>
+                <td>$40</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="booking mb-5">
+        <h1>Book For A Vet Meeting</h1>
+        <form action="/">
+              <div class="selection">
+                <div>
+                <h3>Choose one or more services</h3>
+                    <div class="items">
+                        <input type="checkbox" id="1">
+                        <label> Dental Care</label><br>
+                        <input type="checkbox" id="2">
+                        <label> Cardiology</label><br>
+                        <input type="checkbox" id="3">
+                        <label> Pregnancy</label><br>
+                        <input type="checkbox" id="4">
+                        <label> Vaccinations</label><br>
+                        <input type="checkbox" id="5">
+                        <label> Laser Therapy</label><br>
+                        <input type="checkbox" id="6">
+                        <label> Allergy Testing</label><br>
+                        <input type="checkbox" id="7">
+                        <label> Dermatology</label><br>
+                        <input type="checkbox" id="8">
+                        <label> Microchip ID</label><br>
+                    </div>
+                </div>
+              </div><br>
+
+            
+            <div class="date mb-3">
+                <h3>Choose A Date</h3>
+                <div class="items">
+                    <input type="datetime-local" id="start">
+                </div>
+            </div>
+
+            
+            <div class="personal mb-3">
+                <h3>Personl Information</h3>
+                <div class="items">
+                    <input type="text" placeholder="First Name" class="mb-2"><br>
+                <input type="text" placeholder="Last Name" class="mb-2"><br>
+                <input type="text" placeholder="Email Address" class="mb-2"><br>
+                </div>
+            </div>
+
+            
+            <div class="pet-info">
+                <h3>Pet's Information</h3>
+                <div class="items">
+                    <input type="text" placeholder="Name" class="mb-2"><br>
+                    <input type="number" placeholder="Age" class="mb-2" min="0" max="1000"><br>
+                </div>
+            </div>
+
+            <div class="submit-info mt-5">
+                <button type="button" class="btn btn-secondary submit">Book</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Cards are quite useful when building a website. They are a useful way to organize information.
+    They can be organized using a CSS grid or other layout options.
+    https://getbootstrap.com/docs/5.0/components/card/
+    -->
+
+    <h1>Meet Our Doctors!</h1>
+    <div class="row justify-content-around">
+        <div class="card" style="width: 18rem;">
+            <img src="images/lauren.jpg" class="card-img-top" alt="..."width="130" height="200">
+            <div class="card-body">
+                <p class="card-text"><strong>Dr. Lauren</strong>, our specialist in laser therapy since 2003</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="images/lee.jpg" class="card-img-top" alt="..." width="130" height="200">
+            <div class="card-body">
+                <p class="card-text"><strong>Dr. Lee</strong>, our dentist, with more then 10 years in the field</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="images/robert.jpg" class="card-img-top" alt="..." width="130" height="200">
+            <div class="card-body">
+                <p class="card-text"><strong>Dr. Robert</strong>, our specialist in dermatology, with more than 18 years of experience</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="images/maria.jpg" class="card-img-top" alt="..." width="130" height="200">
+            <div class="card-body">
+                <p class="card-text"><strong>Dr. Maria</strong>, our obstetrician for more than 8 years now</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer class="mt-5 p-4 d-flex justify-content-center">
+    <div class="location">
+        <h4>Our Location</h4>
+        <p>We are located in Ottawa downtown</p>
+        <ul class="location-info">
+            <li>2287 Bank Street</li>
+            <li>K1V 4K9</li>
+            <li>Ottawa, Ontario</li>
+            <li>(613)-999-2433</li>
+            <li>info@mascotasclinic.ca</li>
+        </ul>
+    </div>
+    <div class="quick-contact">
+        <h4 class="mb-3">Quick Contact</h4>
+        <form action="#" method="post">
+            <input type="text" placeholder="Full Name" class="mb-2"><br>
+            <input type="text" placeholder="Email Address" class="mb-2"><br>
+            <textarea name="msg" id="msg" cols="30" rows="5" placeholder="Message..."></textarea><br>
+            <button type="button" class="btn btn-secondary">Send Email</button>
+        </form>
+    </div>
+</footer>
+<div id="copyrights" class="p-2 copyrights-dark d-flex justify-content-center">
+    &copy;2021 All Rights Are Reserved, Mascotas Veterinary Clinic
+</div>
+<!-- here we input our javascript helper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
