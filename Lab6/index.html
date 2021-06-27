@@ -13,6 +13,17 @@ links: https://www.prestigeanimalhospital.com/services/dogs
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link href="styles/styles.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="images/MascotasLogo.png">
+    
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Your own script -->
+    <script src="scripts/service.js"></script>
     <title>Mascotas Veterinary Clinic</title>
 </head>
 <body>
@@ -296,8 +307,13 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                 <h3>Personal Information</h3>
                 <div class="items">
                     <input type="text" placeholder="First Name" class="mb-2"><br>
-                <input type="text" placeholder="Last Name" class="mb-2"><br>
-                <input type="text" placeholder="Email Address" class="mb-2"><br>
+                    <input type="text" placeholder="Last Name" class="mb-2"><br>
+                    <input type="text" placeholder="Email Address" class="mb-2"><br>
+                    <input placeholder="(xxx) xxx-xxxx" 
+                           type="text" 
+                           id="phone" 
+                           title="Please insert only numbers, no space or special characters are allowed.">
+                           <img src="images/phone.png" alt="logo" style="width:45px;"><br>
                 </div>
             </div>
 
@@ -310,7 +326,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                 </div>
             </div>
 
-            <div class="doctors">
+            <div class="doctors mb-3">
                 <h3>Choose a Doctor</h3>
                 <div class="items">
                     <input type="radio" id="lauren" name="doctors" value="lauren">
@@ -324,9 +340,24 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                 </div>
               </div>
 
+            <div class="credit">
+                <h3>Payment</h3>
+                <div class="items">
+                    <p>Credit Card: <input placeholder="xxxx xxxx xxxx xxxx" 
+                                            type="text" id="debit" 
+                                            title="We ask for your credit card number in case of no-show, 20$ will be charged.">
+                                            <img src="images/mastercard.png" alt="logo" style="width:50px;">
+                                            <img src="images/visa.png" alt="logo" style="width:50px;">
+                                        </p>
+                    <p>Expiry Date: <input type="text" id="dateInput"></p>
+                    <p>CVV: <input placeholder="xxx" type="text" id="code" style="width: 50px;"> <img src="images/cvv.png" alt="logo" style="width:50px;"></p>
+                </div>
+            </div>
+
             <div class="submit-info mt-5">
                 <button type="button" class="btn btn-secondary submit">Book</button>
             </div>
+
         </form>
     </div>
 
