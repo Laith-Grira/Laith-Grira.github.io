@@ -1,38 +1,22 @@
-// Function to verify that the phone number is correct.
-// Here, I validate for (12345), but you have to change that for a phone validation
-// Tutorials on Regular expressions
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
-// https://flaviocopes.com/javascript-regular-expressions/
-// Regular expressions can get complex, you can think in terms of a series of characters
-// or numbers
-function validatePhone(txtPhone) {
-    var a = document.getElementById(txtPhone).value;
-    // This filter asks for something like (12345), so parentheses with any number (at least 1)
-    // of digits
-    var filter = /^(\([-+]?[0-9]+)\)$/;
-    if (filter.test(a)) {
-        return true;
-    }
-    else {
-        return false;
-    }
-}
-
+// Function to validate phone number
 function phoneMask() { 
     var num = $(this).val().replace(/\D/g,''); 
     $(this).val('(' + num.substring(0,3) + ') ' + num.substring(3,6) + '-' + num.substring(6,10)); 
 }
 
+// Function to validate credit card number
 function creditValid() { 
     var num = $(this).val().replace(/\D/g,''); 
     $(this).val(num.substring(0,4) + ' ' + num.substring(4,8) + ' ' + num.substring(8,12) + ' ' + num.substring(12,16)); 
 }
 
+// Function to validate CVV code
 function codeValid() { 
     var num = $(this).val().replace(/\D/g,''); 
     $(this).val(num.substring(0,3)); 
 }
 
+// Function that return the week day of the date selected
 function getDayOfTheWeek() {
     var x = document.getElementById("dateInput").value;
     var fields = x.split('/');
@@ -42,6 +26,7 @@ function getDayOfTheWeek() {
     return day_of_week;
 }
 
+// Function to validate doctors availability
 function checkDoctorAvailability(day) {
     switch (day) {
         case 0:
@@ -87,14 +72,11 @@ function checkDoctorAvailability(day) {
 }
 
 // Using date restrictions on datepicker
-// Document of datepicker is here: https://api.jqueryui.com/datepicker/
-// The following code shows how to set specific dates to exclude, as well as Sundays (Day 0)
-// Make sure in your version that you associate Days to remove with Experts (e.g. John doesn't work Mondays)
+// Wednesday is day 3 that is a closed day
 var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"];
 const setDateFormat = "mm/dd/yy";
 
 function disableDates(date) {
-    // Sunday is Day 0, disable all Sundays
     if (date.getDay() === 3)
         return [false];
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
@@ -102,13 +84,10 @@ function disableDates(date) {
 }
 
 
-// HERE, JQuery "LISTENING" starts
+// JQuery "LISTENING" 
 $(document).ready(function(){
 
-    // phone validation, it calls validatePhone
-    // and also some feedback as an Alert + putting a value in the input that shows the format required
-    // the "addClass" will use the class "error" defined in style.css and add it to the phone input
-    // The "error" class in style.css defines yellow background and red foreground
+    // phone validation
     $("#phone").keyup(phoneMask);
     $("#phone").on("change", function(){
         console.log(document.getElementById("phone").value);
@@ -124,7 +103,8 @@ $(document).ready(function(){
         }
     });
 
-
+    // Credit card validation
+    $("#debit").keyup(creditValid);
     $("#debit").on("change", function(){
         console.log(document.getElementById("debit").value);
         var x = document.getElementById("debit").value.length;
@@ -138,8 +118,9 @@ $(document).ready(function(){
             $("#debit").removeClass("error");
         }
     });
-    $("#debit").keyup(creditValid);
 
+    // CVV code validation
+    $("#code").keyup(codeValid);
     $("#code").on("change", function(){
         var x = document.getElementById("code").value.length;
         if (x<3){
@@ -151,20 +132,13 @@ $(document).ready(function(){
             $("#code").removeClass("error");
         }
     });
-    $("#code").keyup(codeValid);
 
-    // To change the style of the calender, look in jqueryui.com, under Themes, in the ThemeRoller Gallery
-    // You can try different themes (the names are under the calendars) / This is Excite Bike
-    // To use a different theme you must include its css in your HTML file.
-    // The one I included in my HTML is the Excite Bike, but you can try others
-
-    // Also, here is a good tutorial for playing with the datepicker in https://webkul.com/blog/jquery-datepicker/
-    // Datepicker is also documented as one of the widgets here: https://api.jqueryui.com/category/widgets/
+    // Booking date validation
     $( "#dateInput" ).datepicker(
         {
             dateFormat: setDateFormat,
-            // no calendar before June 1rst 2020
-            minDate: new Date('06/01/2020'),
+            // no calendar before June 1rst 2021
+            minDate: new Date('06/01/2021'),
             maxDate: '+4M',
             // used to disable some dates
             beforeShowDay: $.datepicker.noWeekends,
@@ -172,6 +146,7 @@ $(document).ready(function(){
         }
     );
 
+    // Validating the input date of the credit card
     $( "#dateInputCredit" ).datepicker(
         {
             dateFormat: setDateFormat,
@@ -181,15 +156,13 @@ $(document).ready(function(){
         }
     );
 
+    // Checking the availability of doctors and disabling if needed
     $("#dateInput").on("change", function(){
         var day = getDayOfTheWeek();
-        console.log(typeof(day));
         checkDoctorAvailability(day);
     });
 
-    // Look at the different events on which an action can be performed
     // https://www.w3schools.com/jquery/jquery_events.asp
-    // Here, we put
     $("#debit").on("mouseenter", function(){
         $("#debit").addClass("showInput");
     });
