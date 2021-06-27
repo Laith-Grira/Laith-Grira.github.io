@@ -33,6 +33,59 @@ function codeValid() {
     $(this).val(num.substring(0,3)); 
 }
 
+function getDayOfTheWeek() {
+    var x = document.getElementById("dateInput").value;
+    var fields = x.split('/');
+    var new_date = new Date();
+    new_date.setFullYear(fields[2], fields[0]-1, fields[1]);
+    var day_of_week = new_date.getDay();
+    return day_of_week;
+}
+
+function checkDoctorAvailability(day) {
+    switch (day) {
+        case 0:
+            document.getElementById('lauren-button').disabled = true;
+            document.getElementById('lee-button').disabled = true;
+            document.getElementById('robert-button').disabled = false;
+            document.getElementById('maria-button').disabled = true;
+            break;
+        case 1:
+            document.getElementById('lauren-button').disabled = false;
+            document.getElementById('lee-button').disabled = false;
+            document.getElementById('robert-button').disabled = true;
+            document.getElementById('maria-button').disabled = true;
+            break;
+        case 2:
+            document.getElementById('lauren-button').disabled = false;
+            document.getElementById('lee-button').disabled = true;
+            document.getElementById('robert-button').disabled = true;
+            document.getElementById('maria-button').disabled = false;
+            break;
+        case 4:
+            document.getElementById('lauren-button').disabled = false;
+            document.getElementById('lee-button').disabled = true;
+            document.getElementById('robert-button').disabled = false;
+            document.getElementById('maria-button').disabled = false;
+            break;
+        case 5:
+            document.getElementById('lauren-button').disabled = true;
+            document.getElementById('lee-button').disabled = false;
+            document.getElementById('robert-button').disabled = true;
+            document.getElementById('maria-button').disabled = false;
+            break;
+        case 6:
+            document.getElementById('lauren-button').disabled = true;
+            document.getElementById('lee-button').disabled = false;
+            document.getElementById('robert-button').disabled = false;
+            document.getElementById('maria-button').disabled = true;
+            break;
+    
+        default:
+            break;
+    }
+}
+
 // Using date restrictions on datepicker
 // Document of datepicker is here: https://api.jqueryui.com/datepicker/
 // The following code shows how to set specific dates to exclude, as well as Sundays (Day 0)
@@ -88,9 +141,7 @@ $(document).ready(function(){
     $("#debit").keyup(creditValid);
 
     $("#code").on("change", function(){
-        console.log(document.getElementById("code").value);
         var x = document.getElementById("code").value.length;
-        console.log(x);
         if (x<3){
             swal("Wrong code format" , "Please finish inserting your CVV", "warning");
             $("#code").val("");
@@ -129,6 +180,12 @@ $(document).ready(function(){
             maxDate: '+60M',
         }
     );
+
+    $("#dateInput").on("change", function(){
+        var day = getDayOfTheWeek();
+        console.log(typeof(day));
+        checkDoctorAvailability(day);
+    });
 
     // Look at the different events on which an action can be performed
     // https://www.w3schools.com/jquery/jquery_events.asp

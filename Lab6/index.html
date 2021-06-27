@@ -398,16 +398,19 @@ Many websites will use what is called CSS grid layouts, where you will have a he
 
             <div class="doctors mb-3">
                 <h3>Choose a Doctor</h3>
-                <div class="items">
-                    <input type="radio" id="lauren" name="doctors" value="lauren">
-                    <label for="lauren">Dr. Lauren</label><br>
-                    <input type="radio" id="lee" name="doctors" value="lee">
-                    <label for="lee">Dr. Lee</label><br>
-                    <input type="radio" id="robert" name="doctors" value="robert">
-                    <label for="robert">Dr. Robert</label><br>
-                    <input type="radio" id="maria" name="doctors" value="maria">
-                    <label for="maria">Dr. Maria</label><br>
+                <div class="items mb-2">
+                    <input type="radio" id="lauren-button" name="doctors" value="lauren">
+                    <label for="lauren"><b>Dr. Lauren</b> (Monday-Tuesday-Thursday)</label><br>
+                    <input type="radio" id="lee-button" name="doctors" value="lee">
+                    <label for="lee"><b>Dr. Lee</b> (Monday-Friday-Saturday)</label><br>
+                    <input type="radio" id="robert-button" name="doctors" value="robert">
+                    <label for="robert"><b>Dr. Robert</b> (Sunday-Thursday-Saturday)</label><br>
+                    <input type="radio" id="maria-button" name="doctors" value="maria">
+                    <label for="maria"><b>Dr. Maria</b> (Tuesday-Thursday-Friday)</label><br>
                 </div>
+                <div class="alert alert-info" role="alert" style="width: 60%;">
+                    Doctors that are not available for your selected date are disabled from selection.
+                  </div>
               </div>
 
             <div class="credit">
