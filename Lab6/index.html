@@ -80,66 +80,180 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     https://getbootstrap.com/docs/5.0/content/tables/
     -->
 
-    <div id="services">
+    <div class="mb-5" id="services">
         <h1 class="mt-3 mb-3"><img src="images/services.png" alt="logo" style="width:70px;"><b>Summary of Our Services</b></h1>
-        <table class="table table-primary table-hover">
-            <thead>
-                <tr>
-                    <th scope="col"><h2>Service</h2></th>
-                    <th scope="col"><h2>Description</h2></th>
-                    <th scope="col"><h2>Price</h2></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Dental Care</td>
-                    <td>Our knowledge and dental experience can help prevent and treat</br>
-                        your pet's dental conditions, including periodontal disease</td>
-                    <td>$35</td>
-                </tr>
-                <tr>
-                    <td>Cardiology</td>
-                    <td>Our first rate facilities, equipment and professional knowledge gets</br>
-                        to the heart of your pet's health and wellness matters</td>
-                    <td>$50</td>
-                </tr>
-                <tr>
-                    <td>Pregnancy</td>
-                    <td>Our extensive experience can help your pet have a successful pregnancy,</br>
-                        well as a happy, healthy litter of puppies</td>
-                    <td>$90</td>
-                </tr>
-                <tr>
-                    <td>Vaccinations</td>
-                    <td>Our veterinarians and techs will customize vaccination protocols that account</br>
-                        for your pet's age, medical history, environment, travel habits and lifestyle</td>
-                    <td>$25</td>
-                </tr>
-                <tr>
-                    <td>Laser Therapy</td>
-                    <td>We are able to customize our pain protocols to include laser for arthritis, </br>
-                        other inflammatory conditions and post operative pain control</td>
-                    <td>$130</td>
-                </tr>
-                <tr>
-                    <td>Allergy Testing</td>
-                    <td>While not usually life threatening, allergies in pets do cause discomfort</br>
-                        and should be treated</td>
-                    <td>$20</td>
-                </tr>
-                <tr>
-                    <td>Dermatology</td>
-                    <td> Our expertise means diagnosing and treating your pet's skin conditions</br>
-                        before they become something more than skin deep</td>
-                    <td>$55</td>
-                </tr><tr>
-                    <td>Microchip ID</td>
-                    <td>Our professional microchip ID services can help identify your pet in case</br>
-                        he or she ever gets lost, stolen or separated from you</td>
-                    <td>$40</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style="font-size: 30px">
+                        <img src="images/clinic.png" alt="logo" style="width:45px;"> Clinical Services
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div>
+                            <table class="table table-primary table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><h2>Service</h2></th>
+                                        <th scope="col"><h2>Description</h2></th>
+                                        <th scope="col"><h2>Price</h2></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Cardiology</td>
+                                        <td>Our first rate facilities, equipment and professional knowledge gets
+                                            to the heart of your pet's health and wellness matters</td>
+                                        <td>$50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pregnancy</td>
+                                        <td>Our extensive experience can help your pet have a successful pregnancy,
+                                            well as a happy, healthy litter of puppies</td>
+                                        <td>$90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Laser Therapy</td>
+                                        <td>We are able to customize our pain protocols to include laser for arthritis,
+                                            other inflammatory conditions and post operative pain control</td>
+                                        <td>$130</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Allergy Testing</td>
+                                        <td>While not usually life threatening, allergies in pets do cause discomfort
+                                            and should be treated</td>
+                                        <td>$20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dermatology</td>
+                                        <td> Our expertise means diagnosing and treating your pet's skin conditions
+                                            before they become something more than skin deep</td>
+                                        <td>$55</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo" style="font-size: 30px">
+                        <img src="images/vaccine.png" alt="logo" style="width:45px;"> Vaccinations
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div>
+                            <table class="table table-primary table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><h2>Service</h2></th>
+                                        <th scope="col"><h2>Description</h2></th>
+                                        <th scope="col"><h2>Price</h2></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Rabies Vaccine</td>
+                                        <td>We provide the Rabies vaccine in our clinic. It is used to prevent rabies before
+                                            exposure to the rabies virus.</td>
+                                        <td>$25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Distemper Vaccine</td>
+                                        <td>We recommend this vaccine for use in healthy dogs as an aid in the prevention
+                                            of disease caused by canine distemper virus.</td>
+                                        <td>$45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Parvovirus Vaccine</td>
+                                        <td>Pets should receive a dose of canine parvovirus vaccine between 14 and 16 weeks
+                                            of age, regardless of how many doses they received earlier.</td>
+                                        <td>$35</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Leptospirosis Vaccine</td>
+                                        <td>We highly recommended this vaccine for any pet that commonly goes outside, even
+                                            just to go to the bathroom in the backyard.</td>
+                                        <td>$30</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree" style="font-size: 30px">
+                        <img src="images/cosmetic.png" alt="logo" style="width:45px;"> Cosmetic Services
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div>
+                            <table class="table table-primary table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><h2>Service</h2></th>
+                                        <th scope="col"><h2>Description</h2></th>
+                                        <th scope="col"><h2>Price</h2></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Dental Care</td>
+                                        <td>Our knowledge and dental experience can help prevent and treat
+                                            your pet's dental conditions, including periodontal disease</td>
+                                        <td>$35</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cosmetic Surgery</td>
+                                        <td>
+                                            Our Cosmetic alteration is any non-therapeutic veterinary procedure
+                                            undertaken to change the appearance of your pet.
+                                        </td>
+                                        <td>$280</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour" style="font-size: 30px">
+                        <img src="images/more.png" alt="logo" style="width:45px;"> Extra Services
+                    </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div>
+                            <table class="table table-primary table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><h2>Service</h2></th>
+                                        <th scope="col"><h2>Description</h2></th>
+                                        <th scope="col"><h2>Price</h2></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Microchip ID</td>
+                                        <td>Our professional microchip ID services can help identify your pet in case
+                                            he or she ever gets lost, stolen or separated from you</td>
+                                        <td>$40</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="booking mb-5" id="booking">
@@ -179,7 +293,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
 
             
             <div class="personal mb-3">
-                <h3>Personl Information</h3>
+                <h3>Personal Information</h3>
                 <div class="items">
                     <input type="text" placeholder="First Name" class="mb-2"><br>
                 <input type="text" placeholder="Last Name" class="mb-2"><br>

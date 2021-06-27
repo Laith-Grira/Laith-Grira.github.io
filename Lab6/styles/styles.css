@@ -6,7 +6,7 @@
 }
 
 td{
-    font-size: 25px;
+    font-size: 20px;
 }
 p{
     font-size: 20px;
@@ -175,4 +175,17 @@ footer {
 .send-email:hover {
     background-color: rgb(163, 124, 24);
     color: rgb(2, 2, 71);
+}
+
+.accordion-button:focus {
+    z-index: 0;
+}
+
+.accordion > td {
+    font-size: 15px;
+}
+
+.accordion {
+    width: 80%;
+    margin-left: 10%;
 }
