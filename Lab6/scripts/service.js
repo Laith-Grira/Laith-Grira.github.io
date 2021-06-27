@@ -42,7 +42,7 @@ const setDateFormat = "mm/dd/yy";
 
 function disableDates(date) {
     // Sunday is Day 0, disable all Sundays
-    if (date.getDay() === 0)
+    if (date.getDay() === 3)
         return [false];
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
     return [ unavailableDates.indexOf(string) === -1 ]
@@ -121,6 +121,14 @@ $(document).ready(function(){
         }
     );
 
+    $( "#dateInputCredit" ).datepicker(
+        {
+            dateFormat: setDateFormat,
+            // no calendar before June 1rst 2021
+            minDate: new Date('06/01/2021'),
+            maxDate: '+60M',
+        }
+    );
 
     // Look at the different events on which an action can be performed
     // https://www.w3schools.com/jquery/jquery_events.asp

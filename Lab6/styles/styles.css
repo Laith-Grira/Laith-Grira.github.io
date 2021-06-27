@@ -177,6 +177,11 @@ footer {
     color: rgb(2, 2, 71);
 }
 
+.send-email:focus {
+    background-color: goldenrod;
+    color: rgb(2, 2, 71);
+}
+
 .accordion-button:focus {
     z-index: 0;
 }
