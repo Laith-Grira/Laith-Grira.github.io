@@ -1,0 +1,22 @@
+.news-main {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.team-image img{
+    width: 70%;
+}
+
+.news-main h1 {
+    font-size: 60px;
+}
+
+.news-main p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.news-text {
+    width: 70%;
+    margin-left: 15%;
+}

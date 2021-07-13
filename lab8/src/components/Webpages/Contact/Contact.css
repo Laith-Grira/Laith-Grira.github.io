@@ -1,0 +1,54 @@
+.main-contact {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.quick-contact {
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+/* Contact styles */
+.quick-contact > form > input {
+    width: 50%;
+    height: 40px;
+    border-radius: 3px;
+    border: 2px solid black;
+    color: aliceblue;
+    background-color: rgb(197, 4, 4);
+}
+
+.quick-contact > form > textarea {
+    width: 50%;
+    border-radius: 3px;
+    border: 2px solid black;
+    color: aliceblue;
+    background-color: rgb(197, 4, 4);
+}
+
+.quick-contact > form > input::placeholder {
+    color: aliceblue;
+}
+
+.quick-contact > form > textarea::placeholder {
+    color: aliceblue;
+}
+
+.send-email {
+    width: 150px;
+    height: 40px;
+    font-size: large;
+    border: 2px solid rgb(197, 4, 4) !important;
+    background-color: black !important;
+    color: aliceblue !important;
+}
+
+.send-email:hover {
+    background-color: rgb(70, 69, 69) !important;
+    color: aliceblue !important;
+}
+
+.send-email:focus {
+    background-color: black !important;
+    color: aliceblue !important;
+}

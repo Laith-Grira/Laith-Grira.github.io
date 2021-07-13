@@ -1,0 +1,88 @@
+.main {
+    width: 90%;
+    margin-left: 5%;
+    padding: 20px;
+}
+
+.news {
+    width: 80%;
+    height: 400px;
+    margin-left: 10%;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.news:hover {
+    text-decoration: underline 5px black;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.news-info {
+    width: 40%;
+    height: 100%;
+    background-color: rgb(197, 4, 4);
+    color: white;
+    font-size: larger;
+}
+
+.news-info h3{
+    color: black;
+}
+
+.news-image {
+    height: 100%;
+    width: 100%;
+}
+
+.news-image img {
+    height: 100%;
+    width: 100%;
+}
+
+.news-feed {
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    color: black;
+}
+
+.news-feed img {
+    width: 100%;
+    height: 100%;
+}
+
+.news1, .news2, .news3 {
+    height: 200px;
+    width: 32%;
+}
+
+.news1 a, .news2 a, .news3 a {
+    text-decoration: none;
+    color: black;
+}
+
+.news1:hover, .news2:hover, .news3:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.videos {
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.video1, .video2 {
+    height: 250px;
+    width: 48%;
+}
