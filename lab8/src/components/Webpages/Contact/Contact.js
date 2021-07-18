@@ -1,6 +1,7 @@
 import './Contact.css';
 import { useState } from "react";
 import swal from 'sweetalert';
+import { Trans, useTranslation } from 'react-i18next';
 
 
 
@@ -15,23 +16,22 @@ const Contact = () => {
     const [twitterID, setTwitterID] = useState([]);
     const [twitterMsg, setTwitterMsg] = useState([]);
 
+    const { t, i18n } = useTranslation();
+
     return ( 
         <div className="main-contact mt-4">
-            <h1>Contact page</h1>
+            <h1>{t("contact.title")}</h1>
             <div className="quick-contact mt-5">
-                <h4>Contact The Team managment</h4>
-                <p>If you have any questions about our trials for the youth team, or want to be a member 
-                    in our fanbase to become the ultimate fan, with many more, please fill out your
-                    information and send us an email defining your enquiry. (We respond within 3 business days)
-                </p>
+                <h4>{t("contact.email-section.title")}</h4>
+                <p>{t("contact.email-section.description")}</p>
                 <form action="#" method="post">
                     <input type="text" 
-                            placeholder="Full Name" 
+                            placeholder={t("contact.email-section.name")}
                             className="mb-2"
                             onChange={ e => setName(e.target.value)}/>
                     <br />
                     <input type="text" 
-                            placeholder="Email Address" 
+                            placeholder={t("contact.email-section.email")}
                             className="mb-2"
                             onChange={ e => setEmail(e.target.value)}/>
                     <br />
@@ -39,33 +39,43 @@ const Contact = () => {
                                 id="msg" 
                                 cols="30" 
                                 rows="10" 
-                                placeholder="Email message..."
+                                placeholder={t("contact.email-section.message")}
                                 onChange={ e => setEmailMsg(e.target.value)}></textarea>
                                 <br/>
                     <button type="button" 
                             className="btn btn-secondary send-email"
                             onClick={ () => {
                                 if (name == '') {
-                                    swal("Invalid Name", "Please insert your Full Name in the requested field.", "error");
+                                    swal(
+                                        t("contact.alerts.email-alerts.invalid-name.title"),
+                                        t("contact.alerts.email-alerts.invalid-name.desc"),
+                                        "error");
                                 } else if (email == ''){
-                                    swal("Invalid Email", "Please insert your Full Email in the requested field.", "error");
+                                    swal(
+                                        t("contact.alerts.email-alerts.invalid-email.title"),
+                                        t("contact.alerts.email-alerts.invalid-email.desc"),
+                                        "error");
                                 } else if (emailMsg == '') {
-                                    swal("Invalid message in the email", "Please insert your message in the requested field.", "error");
+                                    swal(
+                                        t("contact.alerts.email-alerts.invalid-message.title"),
+                                        t("contact.alerts.email-alerts.invalid-message.desc"),
+                                        "error");
                                 } else {
-                                    swal("Success!!", "Email is successfully sent to our team managment.", "success");
+                                    swal(
+                                        t("contact.alerts.email-alerts.success.title"),
+                                        t("contact.alerts.email-alerts.success.desc"),
+                                        "success");
                                 }
                             }}
-                            ><b>Send Email</b></button>
+                            ><b>{t("contact.email-section.send")}</b></button>
                 </form>
             </div>
             <div className="quick-contact">
-            <h4>Poste In Our Twitter Profile</h4>
-                <p>Post a tweet in our official twitter account to share your opinions or send a feedback
-                    to our team. (Please note that every tweet is being monitred by our admin).
-                </p>
+            <h4>{t("contact.tweet-section.title")}</h4>
+                <p>{t("contact.tweet-section.description")}</p>
                 <form action="#" method="post">
                     <input type="text" 
-                            placeholder="@example" 
+                            placeholder={t("contact.tweet-section.example")}
                             title="Insert your twitter id here." 
                             className="mb-2"
                             onChange={ e => setTwitterID(e.target.value)}/>
@@ -74,22 +84,34 @@ const Contact = () => {
                                 id="msg" 
                                 cols="30" 
                                 rows="5" 
-                                placeholder="Message..."
+                                placeholder={t("contact.tweet-section.message")}
                                 onChange={ e => setTwitterMsg(e.target.value)}
                                 ></textarea><br/>
                     <button type="button" 
                             className="btn btn-secondary send-email"
                             onClick={() => {
                                 if (twitterID == '') {
-                                    swal("Empty Twitter ID", "Please insert your twitter ID in the requested field.", "error");
+                                    swal(
+                                        t("contact.alerts.twitter-alerts.empty-id.title"),
+                                        t("contact.alerts.twitter-alerts.empty-id.desc"),
+                                        "error");
                                 } else if (twitterID[0] !="@"){
-                                    swal("Invalid Twitter ID", "Please make sure you add the '@' at the begining of your twitter ID.", "error");
+                                    swal(
+                                        t("contact.alerts.twitter-alerts.invalid-id.title"),
+                                        t("contact.alerts.twitter-alerts.invalid-id.desc"),
+                                        "error");
                                 } else if (twitterMsg == '') {
-                                    swal("Invalid message", "Please enter a message in the text area.", "error");
+                                    swal(
+                                        t("contact.alerts.twitter-alerts.invalid-message.title"),
+                                        t("contact.alerts.twitter-alerts.invalid-message.desc"),
+                                        "error");
                                 } else {
-                                    swal("Success!!", "Tweet is successfully sent to our twitter page.", "success");
+                                    swal(
+                                        t("contact.alerts.twitter-alerts.success.title"),
+                                        t("contact.alerts.twitter-alerts.success.desc"),
+                                        "success");
                                 }
-                            }}><b>Tweet</b></button>
+                            }}><b>{t("contact.tweet-section.tweet")}</b></button>
                 </form>
             </div>
         </div>

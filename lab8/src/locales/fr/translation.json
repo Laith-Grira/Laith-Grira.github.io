@@ -1,0 +1,216 @@
+{
+    "navbar": {
+        "home-link": "Accueil",
+        "team-link": "Équipe",
+        "fixtures-link": "Matchs",
+        "tickets-link": "Billets",
+        "stats-link": "Stat",
+        "contact-link": "Contact"
+    },
+    "home": {
+        "news-title": {
+            "small-title": "Équipe masculine",
+            "big-title": "L'équipe est prête pour la nouvelle saison 2021/2022",
+            "news-page": {
+                "paragraph1": "Tout au long de l'histoire d'Ottawa United, la saison idiote est un événement qui tourne perpétuellement 365 jours par an, pour s'intensifier en juin, juillet et août, lorsque l'activité de transfert atteint son apogée du chaos. Depuis 2018, nous nous concentrons principalement sur les départs, les adieux et les hommages ; avec de rares signatures éparpillées partout.",
+                "paragraph2": "Cet été pourrait s'avérer être la même chose. On a déjà passé au crible les départs de Zinedine Zidane (2.0) et Sergio Ramos. Le panthéon des personnalités responsables d'avoir renversé l'Europe à travers un règne dynastique s'élève un à un hors du Bernabeu et met fin à un chapitre inoubliable.",
+                "paragraph3": "L'exode va probablement se poursuivre. Carlo Ancelotti veut réduire l'effectif, pour le meilleur ou pour le pire. Certains critiquent cette initiative, mais elle est nécessaire. La liste n'est pas abondante avec des superstars, mais elle est lourde pour les joueurs qui ne verront pas le terrain, et peut nuire au moral de l'équipe avec leur manque de temps de jeu et leurs grondements. Les joueurs superflus pourraient également gagner un sou et perdre le salaire de l'équipe – un spectacle bienvenu. Six joueurs la saison dernière, sans compter les joueurs de l'équipe de jeunes et les joueurs qui ont été prêtés à mi-parcours de la campagne, ont joué moins de 1000 minutes au total. L'un de ces joueurs, Isco, n'a eu aucune blessure majeure (il n'a raté que deux matchs en raison d'une blessure) à signaler. Il est difficile de voir sa situation s'améliorer avec le retour de Martin Odegaard au club.",
+                "paragraph4": "Connaissant l'amour d'Ancelotti pour les rouages ​​​​de milieu de terrain créatifs, il peut aligner Odegaard et Isco ensemble sur des tronçons, mais il aura également la tâche de jongler avec une longue liste de milieux de terrain centraux et d'attaquants pour faire monter Karim Benzema en tête. Les rotations d'Ancelotti sont généralement serrées au départ. Il serait peu probable qu'au moins deux joueurs de ce tableau de profondeur n'aient pas été éjectés de Madrid d'ici août.",
+                "paragraph5": "Des acheteurs émergeront, même dans ce paysage financier loin d'être idéal. Les clubs privés continuent de dépenser de l'argent, d'autres vont s'endetter davantage. Le plus gros problème du Real Madrid sera de perdre des étoiles à un prix inférieur à la valeur marchande. Avec le recul, vendre des joueurs comme Gareth Bale, Isco et Marcelo à l'été 2018 aurait été une meilleure décision financière que de les conserver et de les perdre pour pratiquement rien maintenant ou l'été prochain. Hélas, il est difficile de tout prévoir."
+            }
+        },
+        "linked-news": {
+            "title": "Nouvelles de notre équipe",
+            "news1": "Kaka a hâte d'être notre nouveau team manager pour cette saison",
+            "news2": "Notre joueur Xhaka a perdu l'Euro 2020 contre l'Angleterre et a quitté le tournoi",
+            "news3": "Notre direction d'équipe est impatiente d'augmenter la capacité du stade de 10 000 sièges"
+        },
+        "videos": "Regardez notre équipe en action"
+
+    },
+    "team": {
+        "squad": "Formation de l'équipe",
+        "goalkeepers": "Gardiens",
+        "defenders": "Défenseurs",
+        "midfeilders": "Milieu ",
+        "attackers": "Attaquants"
+    },
+    "fixtures": {
+        "league": "Première Ligue canadienne",
+        "cup": "Coupe de la Ligue",
+        "matchday": "Journée",
+        "date1": "27 août 2021",
+        "date2": "31 août 2021",
+        "date3": "7 septembre 2021",
+        "date4": "21 septembre 2021",
+        "quarter-final": "Quart de finale"
+    },
+    "tickets": {
+        "title": "Achetez un billet de match",
+        "matchday": {
+            "title": "Journée",
+            "select": "Sélectionnez la journée"
+        },
+        "seat": {
+            "seat": "Place",
+            "select": "Sélectionnez la place",
+            "premium": "Prime"
+        },
+        "info": {
+            "title": "Informations personnelles",
+            "name": "Nom et prénom",
+            "email": "Adresse e-mail"
+        },
+        "payment": {
+            "title": "Paiement",
+            "card": "Carte de crédit",
+            "date": "Date",
+            "cvv": "CVV",
+            "date-format": "MM/AAAA"
+        },
+        "buy": "Acheter",
+        "infos": {
+            "match-info": "Choisissez le match que vous voulez regarder",
+            "seat-info": "Choisissez où vous voulez vous asseoir dans le stade"
+        },
+        "alerts": {
+            "expiry-date": {
+                "wrong-format": {
+                    "title": "Format de date incorrect",
+                    "desc": "Format de date d'expiration incorrect dans la date d'expiration de votre carte de crédit ! Veuillez suivre le format MM/AAAA."
+                },
+                "month-smaller": {
+                    "title": "Mois invalide",
+                    "desc": "Le mois ne peut pas être inférieur à 1 dans la date d'expiration de votre carte de crédit."
+                },
+                "month-bigger": {
+                    "title": "Mois invalide",
+                    "desc": "Le mois ne peut pas dépasser 12 dans la date d'expiration de votre carte de crédit."
+                },
+                "year-smaller": {
+                    "title": "Année invalide",
+                    "desc": "L'année ne peut pas être inférieure à 2021 dans la date d'expiration de votre carte de crédit."
+                },
+                "year-bigger": {
+                    "title": "Année invalide",
+                    "desc": "L'année ne peut pas dépasser 2050 dans la date d'expiration de votre carte de crédit."
+                }
+            },
+            "submit-ticket": {
+                "no-ticket": {
+                    "title": "Aucun billet n'a été sélectionné",
+                    "desc": "Assurez-vous de choisir votre billet de jour de match dans la section 1."
+                },
+                "no-seat": {
+                    "title": "Aucune place n'a été sélectionné",
+                    "desc": "Assurez-vous de choisir votre siège dans la section 2."
+                },
+                "invalid-name": {
+                    "title": "Nom incorrect",
+                    "desc": "Veuillez vous assurer d'entrer votre nom dans la section 3."
+                },
+                "invalid-email": {
+                    "title": "E-mail invalide",
+                    "desc": "Assurez-vous d'entrer votre e-mail dans la section 3."
+                },
+                "invalid-credit": {
+                    "title": "Numéro de carte de crédit invalide",
+                    "desc": "Veuillez vérifier votre numéro de carte de crédit dans la section 4."
+                },
+                "invalid-date": {
+                    "title": "Date d'expiration invalide pour la carte de crédit",
+                    "desc": "Veuillez vérifier la date d'expiration de votre carte de crédit dans la section 4."
+                },
+                "invalid-cvv": {
+                    "title": "CVV invalide pour carte de crédit",
+                    "desc": "Veuillez vérifier votre code CVV dans la section 4."
+                },
+                "success": {
+                    "title": "Succès!!",
+                    "desc": "Vous avez acheté votre billet avec succès."
+                }
+            }
+        }
+    },
+    "stats": {
+        "title": "Table de la ligue canadienne",
+        "tb-row": {
+            "club": "Club",
+            "mp": "MJ",
+            "pts": "Pts",
+            "w": "G",
+            "d": "N",
+            "l": "P",
+            "gf": "BM",
+            "ga": "BC"
+        },
+        "legend": {
+            "title": "Légende",
+            "mp": "(Match Joué)",
+            "pts": "(Points)",
+            "w": "(Gagné)",
+            "d": "(Nul)",
+            "l": "(Perdu)",
+            "gf": "(Buts Marqués)",
+            "ga": "(Buts Contre)"
+        }
+    },
+    "contact": {
+        "title": "Contact",
+        "email-section": {
+            "title": "Contactez la direction de l'équipe",
+            "description": "Si vous avez des questions sur nos essais pour l'équipe de jeunes, ou si vous souhaitez être membre de notre fanbase pour devenir le fan ultime, avec bien d'autres, veuillez remplir vos informations et nous envoyer un e-mail définissant votre demande. (Nous répondons sous 3 jours ouvrés)",
+            "name": "Nom et prénom",
+            "email":"Adresse d'e-mail",
+            "message": "Message d'email...",
+            "send": "Envoyer e-mail"
+        },
+        "tweet-section": {
+            "title": "Publier sur notre profil Twitter",
+            "description": "Publiez un tweet sur notre compte Twitter officiel pour partager vos opinions ou envoyer un commentaire à notre équipe. (Veuillez noter que chaque tweet est surveillé par notre administrateur).",
+            "example": "@exemple",
+            "message": "Message...",
+            "tweet": "Tweet"
+        },
+        "alerts": {
+            "email-alerts": {
+                "invalid-name": {
+                    "title": "Nom incorrect",
+                    "desc": "Veuillez insérer votre nom complet dans le champ demandé."
+                },
+                "invalid-email": {
+                    "title": "E-mail invalide",
+                    "desc": "Veuillez insérer votre e-mail complet dans le champ demandé."
+                },
+                "invalid-message": {
+                    "title": "Message invalide dans l'e-mail",
+                    "desc": "Veuillez insérer votre message dans le champ demandé."
+                },
+                "success": {
+                    "title": "Succès!!",
+                    "desc": "L'e-mail a été envoyé avec succès à notre direction d'équipe."
+                }
+            },
+            "twitter-alerts": {
+                "empty-id": {
+                    "title": "Twitter ID est vide",
+                    "desc": "Veuillez insérer votre identifiant Twitter dans le champ demandé."
+                },
+                "invalid-id": {
+                    "title": "Twitter ID est invalide",
+                    "desc": "Assurez-vous d'ajouter le '@' au début de votre identifiant Twitter."
+                },
+                "invalid-message": {
+                    "title": "Message invalide",
+                    "desc": "Veuillez saisir un message dans la zone de texte."
+                },
+                "success": {
+                    "title": "Succès!!",
+                    "desc": "Le Tweet est envoyé avec succès à notre page twitter."
+                }
+            }
+        }
+    }
+
+    
+}

@@ -1,6 +1,7 @@
 import './Tickets.css';
 import { useState } from "react";
 import swal from 'sweetalert';
+import { useTranslation } from 'react-i18next';
 
 
 // Import icons
@@ -10,6 +11,8 @@ import visa from '../../../assets/icons/visa.png';
 import info from '../../../assets/icons/info.png';
 
 const Tickets = () => {
+
+    const { t, i18n } = useTranslation();
 
     // personal info variables
     const [name, setName] = useState([]);
@@ -24,57 +27,57 @@ const Tickets = () => {
 
     return ( 
         <div className="main-tickets mt-4 mb-5">
-            <h1>Buy a Game Ticket</h1>
+            <h1>{t("tickets.title")}</h1>
             <form action="#" method="post">
                 <div className="ticket-info pt-5">
                     <div className="match-day">
-                        <h3>1 - Match Day</h3>
+                        <h3>1 - {t("tickets.matchday.title")}</h3>
                         <div className="match-info">
                             <select id="dietSelect" name="dietSelect" className="input-style" onChange={ e => { setMatchTicketValid('true')}}>
-                                <option value="" disabled selected hidden>Select Match Day</option>
+                                <option value="" disabled selected hidden>{t("tickets.matchday.select")}</option>
                                 <option value="OUFC-HAL"> Ottawa United --- Halifax FC</option>
                                 <option value="YUFC-OUFC"> York United --- Ottawa United</option>
                                 <option value="FCE-OUFC"> FC Edmonton --- Ottawa United</option>
                                 <option value="OUFC-FCF"> Ottawa United --- FC Forge</option>
                             </select>
-                            <div title="Choose the game that you want to watch">
+                            <div title={t("tickets.infos.match-info")}>
                                 <img src={info} alt="info" className="info-icon" />
                             </div>
                         </div>
                     </div>
                     <div className="match-seat mt-5">
-                        <h3>2 - Seat</h3>
+                        <h3>2 - {t("tickets.seat.seat")}</h3>
                         <div className="match-info">
                             <select id="dietSelect" name="dietSelect" className="input-style" onChange={ e => { setSeatValid('true') }}>
-                                <option value="" disabled selected hidden>Select Your Seat</option>
+                                <option value="" disabled selected hidden>{t("tickets.seat.select")}</option>
                                 <option value="cat1"> $30 - CAT 1</option>
                                 <option value="cat2"> $55 - CAT 2</option>
                                 <option value="cat3"> $105 - CAT 3 </option>
-                                <option value="pre"> $450 - Premium</option>
+                                <option value="pre"> $450 - {t("tickets.seat.premium")}</option>
                             </select>
-                            <div title="Choose where you want to sit in the stadium">
+                            <div title={t("tickets.infos.seat-info")}>
                                 <img src={info} alt="info" className="info-icon" />
                             </div>
                         </div>
                     </div>
                     <div className="personal-info mt-5">
-                        <h3>3 - Personal Info</h3>
+                        <h3>3 - {t("tickets.info.title")}</h3>
                         <input type="text" 
-                                placeholder="Full Name" 
+                                placeholder={t("tickets.info.name")}
                                 className="input-style mb-2" 
                                 onChange={ e => setName('true') }/>
                         <br />
                         <input type="text" 
-                                placeholder="Email Address" 
+                                placeholder={t("tickets.info.email")}
                                 className="input-style mb-2" 
                                 onChange={  e => setEmail('true') }/>
                         <br />
                     </div>
                     <div className="payment mt-5">
-                        <h3>4 - Payment</h3>
+                        <h3>4 - {t("tickets.payment.title")}</h3>
                         
                         <div className="credit-info">
-                            <p><b>Credit Card:</b> <br />
+                            <p><b>{t("tickets.payment.card")}:</b> <br />
                                 <input placeholder="XXXX XXXX XXXX XXXX" 
                                                     type="text" id="debit" 
                                                     onChange={ e => {
@@ -99,10 +102,10 @@ const Tickets = () => {
                                                     <img src={visa} alt="logo" />
                                                 </p>
                             <div className="card-info">
-                            <div><b>Expiry Date</b>: <br />
+                            <div><b>{t("tickets.payment.date")}:</b> <br />
                                 <input type="text" 
                                         id="dateInputCredit" 
-                                        placeholder="MM/YYYY" 
+                                        placeholder={t("tickets.payment.date-format")} 
                                         onChange= {
                                             e => {
                                                 const reg = /^[0-9\b]+$/;
@@ -112,17 +115,32 @@ const Tickets = () => {
                                                     const year = date.substring(3,8);
 
                                                     if (!reg.test(month) || !reg.test(year) || (date[2] !== '/')) {
-                                                        swal("Wrong date format", "Wrong Expiry Date Format in your credit card expiry date! Please follow the MM/YYYY format.", "warning");
+                                                        swal(
+                                                            t("tickets.alerts.expiry-date.wrong-format.title"),
+                                                            t("tickets.alerts.expiry-date.wrong-format.desc"),
+                                                            "warning");
                                                     } else {
                                                         setExpiryDateValid('false');
-                                                        if (parseInt(month) < 0 ) {
-                                                            swal("Invalid Month", "Month can not be les than 0 in your credit card expiry date.", "warning");
+                                                        if (parseInt(month) <= 0 ) {
+                                                            swal(
+                                                                t("tickets.alerts.expiry-date.month-smaller.title"),
+                                                                t("tickets.alerts.expiry-date.month-smaller.desc"),
+                                                                "warning");
                                                         } else if(parseInt(month)>12) {
-                                                            swal("Invalid Month", "Month can not be bigger than 12 in your credit card expiry date.", "warning");
+                                                            swal(
+                                                                t("tickets.alerts.expiry-date.month-bigger.title"),
+                                                                t("tickets.alerts.expiry-date.month-bigger.desc"),
+                                                                "warning");
                                                         } else if (parseInt(year) < 2021) {
-                                                            swal("Invalid Year", "Year can not be less than 2021 in your credit card expiry date.", "warning");
+                                                            swal(
+                                                                t("tickets.alerts.expiry-date.year-smaller.title"),
+                                                                t("tickets.alerts.expiry-date.year-smaller.desc"),
+                                                                "warning");
                                                         } else if(parseInt(year)>2050) {
-                                                            swal("Invalid Year", "Year can not exceed 2050 in your credit card expiry date.", "warning");
+                                                            swal(
+                                                                t("tickets.alerts.expiry-date.year-bigger.title"),
+                                                                t("tickets.alerts.expiry-date.year-bigger.desc"),
+                                                                "warning");
                                                         } else {
                                                             setExpiryDateValid('true');
                                                         }
@@ -135,7 +153,7 @@ const Tickets = () => {
                                             }
                                         }
                                         /></div>
-                            <div><b>CVV:</b> <br />
+                            <div><b>{t("tickets.payment.cvv")}:</b> <br />
                                 <input placeholder="XXX" 
                                         type="text" 
                                         id="code" 
@@ -165,25 +183,49 @@ const Tickets = () => {
                                 onClick = {
                                     () => {
                                         if (matchTicketValid !== 'true') {
-                                            swal("No ticket was selected", "Please make sure to choose your match day ticket in Section 1.", "error");
+                                            swal(
+                                                t("tickets.alerts.submit-ticket.no-ticket.title"),
+                                                t("tickets.alerts.submit-ticket.no-ticket.desc"),
+                                                "error");
                                         } else if (seatValid !== 'true') {
-                                            swal("No seat was selected", "Please make sure to choose your seat in Section 2.", "error");
+                                            swal(
+                                                t("tickets.alerts.submit-ticket.no-seat.title"),
+                                                t("tickets.alerts.submit-ticket.no-seat.desc"),
+                                                "error");
                                         } else if (name !== 'true') {
-                                            swal("Invalid name", "Please make sure to enter your name in Section 3.", "error");
+                                            swal(
+                                                t("tickets.alerts.submit-ticket.invalid-name.title"),
+                                                t("tickets.alerts.submit-ticket.invalid-name.desc"),
+                                                "error");
                                         } else if (email !== 'true') {
-                                            swal("Invalid email", "Please make sure to enter your email in Section 3.", "error");
+                                            swal(
+                                                t("tickets.alerts.submit-ticket.invalid-email.title"),
+                                                t("tickets.alerts.submit-ticket.invalid-email.desc"),
+                                                "error");
                                         } else if (creditNumberValid !== 'true') {
-                                            swal("Invalid credit card number", "Please check your credit card number in Section 4.", "error");
+                                            swal(
+                                                t("tickets.alerts.submit-ticket.invalid-credit.title"),
+                                                t("tickets.alerts.submit-ticket.invalid-credit.desc"),
+                                                "error");
                                         } else if (expiryDateValid !== 'true') {
-                                            swal("Invalid expiry date for credit card", "Please check your credit card expiry date in Section 4.", "error");
+                                            swal(
+                                                t("tickets.alerts.submit-ticket.invalid-date.title"),
+                                                t("tickets.alerts.submit-ticket.invalid-date.desc"),
+                                                "error");
                                         } else if (codeValid !== 'true') {
-                                            swal("Invalid CVV for credit card", "Please check your CVV code in Section 4.", "error");
+                                            swal(
+                                                t("tickets.alerts.submit-ticket.invalid-cvv.title"),
+                                                t("tickets.alerts.submit-ticket.invalid-cvv.desc"),
+                                                "error");
                                         } else {
-                                            swal("Success!!", "You hav successfully bought your ticket.", "success");
+                                            swal(
+                                                t("tickets.alerts.submit-ticket.success.title"),
+                                                t("tickets.alerts.submit-ticket.success.desc"),
+                                                "success");
                                         }
                                     }
                                 }
-                                ><b>BUY</b></button>
+                                ><b>{t("tickets.buy")}</b></button>
                     </div>
                 </div>
             </form>

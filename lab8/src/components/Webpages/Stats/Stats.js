@@ -1,19 +1,23 @@
 import './Stats.css';
+import { useTranslation } from 'react-i18next';
 
 const Stats = () => {
+
+    const { t, i18n } = useTranslation();
+
     return ( 
         <div className="main-stats mt-5">
-            <h1>Canadian League Table</h1>
+            <h1>{t("stats.title")}</h1>
             <table className="table-elem mb-3">
                 <tr>
-                    <th>Club</th>
-                    <th>MP</th>
-                    <th>Pts</th>
-                    <th>W</th>
-                    <th>D</th>
-                    <th>L</th>
-                    <th>GF</th>
-                    <th>GA</th>
+                    <th>{t("stats.tb-row.club")}</th>
+                    <th>{t("stats.tb-row.mp")}</th>
+                    <th>{t("stats.tb-row.pts")}</th>
+                    <th>{t("stats.tb-row.w")}</th>
+                    <th>{t("stats.tb-row.d")}</th>
+                    <th>{t("stats.tb-row.l")}</th>
+                    <th>{t("stats.tb-row.gf")}</th>
+                    <th>{t("stats.tb-row.ga")}</th>
                     
                 </tr>
                 <tr>
@@ -117,7 +121,15 @@ const Stats = () => {
                     <td>31</td>
                 </tr>
                 </table>
-                <p><b>Legend:</b> <br /> <b>MP</b> (Matchs Played), <b>Pts</b> (Points), <b>W</b> (Wins), <b>D</b> (Draws), <b>L</b> (Loses), <b>GF</b> (Goals For), <b>GA</b> (Goals Against)</p>
+                <p><b>{t("stats.legend.title")}</b> <br /> 
+                    <b>{t("stats.tb-row.mp")}</b> {t("stats.legend.mp")}, 
+                    <b>{t("stats.tb-row.pts")}</b> {t("stats.legend.pts")}, 
+                    <b>{t("stats.tb-row.w")}</b> {t("stats.legend.w")}, 
+                    <b>{t("stats.tb-row.d")}</b> {t("stats.legend.d")}, 
+                    <b>{t("stats.tb-row.l")}</b> {t("stats.legend.l")}, 
+                    <b>{t("stats.tb-row.gf")}</b> {t("stats.legend.gf")}, 
+                    <b>{t("stats.tb-row.ga")}</b> {t("stats.legend.ga")}
+                </p>
 
         </div>
      );

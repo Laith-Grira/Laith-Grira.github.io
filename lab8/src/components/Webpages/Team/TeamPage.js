@@ -24,15 +24,20 @@ import Glove from '../../../assets/icons/glove.png';
 import Soccer from '../../../assets/icons/soccer.png';
 import Defence from '../../../assets/icons/defense.png';
 
+import { useTranslation } from 'react-i18next';
+
 
 
 const TeamPage = () => {
+
+    const { t, i18n } = useTranslation();
+
     return ( 
         <div className="team-main">
-            <h1 className="team-title">Team Squad</h1>
+            <h1 className="team-title">{t("team.squad")}</h1>
             <div className="team">
                 <div className="goalkeepers">
-                    <h1><img src={Glove} alt="glove" className="icon" /> Goalkeepers</h1>
+                    <h1><img src={Glove} alt="glove" className="icon" /> {t("team.goalkeepers")}</h1>
                     <div className="players">
                         <div className="player">
                             <div className="player-pic">
@@ -55,7 +60,7 @@ const TeamPage = () => {
                     </div>
                 </div>
                 <div className="defenders">
-                    <h1><img src={Defence} alt="defence" className="icon" /> Defenders</h1>
+                    <h1><img src={Defence} alt="defence" className="icon" /> {t("team.defenders")}</h1>
                     <div className="players">
                         <div className="player">
                             <div className="player-pic">
@@ -105,7 +110,7 @@ const TeamPage = () => {
                     </div>
                 </div>
                 <div className="midfielders">
-                    <h1><img src={Soccer} alt="soccer" className="icon" /> Midfeilders</h1>
+                    <h1><img src={Soccer} alt="soccer" className="icon" /> {t("team.midfeilders")}</h1>
                     <div className="players">
                         <div className="player">
                             <div className="player-pic">
@@ -164,7 +169,7 @@ const TeamPage = () => {
                     </div>
                 </div>
                 <div className="attackers">
-                    <h1><img src={Shoe} alt="shoe" className="icon" /> Attackers</h1>
+                    <h1><img src={Shoe} alt="shoe" className="icon" /> {t("team.attackers")}</h1>
                     <div className="players">
                         <div className="player">
                             <div className="player-pic">

@@ -1,0 +1,216 @@
+{
+    "navbar": {
+        "home-link": "Home",
+        "team-link": "Team",
+        "fixtures-link": "Fixtures",
+        "tickets-link": "Tickets",
+        "stats-link": "Stats",
+        "contact-link": "Contact"
+    },
+    "home": {
+        "news-title": {
+            "small-title": "Men's Team",
+            "big-title": "The Team is Ready For the New 2021/2022 Season",
+            "news-page": {
+                "paragraph1": "Throughout Ottawa United’s history, silly season is an event that perpetually spins 365 days of the year, only to ramp up in June, July, and August where the transfer activity hits its apex of chaos. Since 2018, we’ve focused mostly on departures, goodbyes, and tributes; with rare signings scattered throughout.",
+                "paragraph2": "This summer could prove to be the same. We’ve already sifted through departures of Zinedine Zidane (2.0) and Sergio Ramos. The pantheon of figures responsible for flipping Europe on its head through a dynastic reign are one-by-one soaring out of the Bernabeu and putting a close to an unforgettable chapter.",
+                "paragraph3": "The exodus will likely continue. Carlo Ancelotti wants to trim down the squad, for better or worse. Some are critical of that initiative, but it’s necessary. The roster is not abundant with superstars, but it’s heavy on players who won’t see the field, and may drag the team’s morale with their lack of playing time and rumblings. Superfluous players could also turn a penny and shed the team of salary — a welcome sight. Six players last season, not including the youth team players and players who were sent out on loan mid-way through the campaign, played less than 1000 minutes total. One of those players, Isco, had no major injuries (he missed just two games due to injury) to report. It’s hard to see his situation improving with Martin Odegaard returning to the club.",
+                "paragraph4": "Knowing Ancelotti’s love for creative midfield cogs, he may field Odegaard and Isco together through stretches, but he’ll also have the task of juggling a long list of central midfielders and attackers to wing Karim Benzema up top. Ancelotti’s rotations are typically tight to begin with. It would be unlikely if at least two players in that depth chart weren’t ejected out of Madrid by August.",
+                "paragraph5": "Buyers will emerge, even amid this less-than-ideal financial landscape. Privately-owned clubs are still spending money, others will go into further debt. Real Madrid’s biggest issue will be losing stars at less than market value. In hindsight, selling players like Gareth Bale, Isco, and Marcelo in the summer of 2018 would’ve been a better financial decision than holding on to them and losing them for practically nothing now or next summer. Alas, it’s hard to foresee everything."
+            }
+        },
+        "linked-news": {
+            "title": "News Of Our Team",
+            "news1": "Kaka is looking forward to be our new team manager for this season",
+            "news2": "Our player Xhaka lost in the Euro 2020 against England and left the tournement",
+            "news3": "Our Team managment is looking forward to expend the stadium capacity by 10,000 seats"
+        },
+        "videos": "Watch Our Team In Action"
+
+    },
+    "team": {
+        "squad": "Team Squad",
+        "goalkeepers": "Goalkeepers",
+        "defenders": "Defenders",
+        "midfeilders": "Midfielders",
+        "attackers": "Attackers"
+    },
+    "fixtures": {
+        "league": "Canada Premier League",
+        "cup": "League Cup",
+        "matchday": "Matchday",
+        "date1": "Auguest 27th, 2021",
+        "date2": "Auguest 31st, 2021",
+        "date3": "September 7th, 2021",
+        "date4": "September 21st, 2021",
+        "quarter-final": "Quarter Final"
+    },
+    "tickets": {
+        "title": "Buy a Game Ticket",
+        "matchday": {
+            "title": "Match Day",
+            "select": "Select Match Day"
+        },
+        "seat": {
+            "seat": "Seat",
+            "select": "Select Your Seat",
+            "premium": "Premium"
+        },
+        "info": {
+            "title": "Personal Info",
+            "name": "Full Name",
+            "email": "Email Address"
+        },
+        "payment": {
+            "title": "Payment",
+            "card": "Credit Card",
+            "date": "Date",
+            "cvv": "CVV",
+            "date-format": "MM/YYYY"
+        },
+        "buy": "Buy",
+        "infos": {
+            "match-info": "Choose the game that you want to watch",
+            "seat-info": "Choose where you want to sit in the stadium"
+        },
+        "alerts": {
+            "expiry-date": {
+                "wrong-format": {
+                    "title": "Wrong date format",
+                    "desc": "Wrong Expiry Date Format in your credit card expiry date! Please follow the MM/YYYY format."
+                },
+                "month-smaller": {
+                    "title": "Invalid Month",
+                    "desc": "Month can not be less than 1 in your credit card expiry date."
+                },
+                "month-bigger": {
+                    "title": "Invalid Month",
+                    "desc": "Month can not be bigger than 12 in your credit card expiry date."
+                },
+                "year-smaller": {
+                    "title": "Invalid Year",
+                    "desc": "Year can not be less than 2021 in your credit card expiry date."
+                },
+                "year-bigger": {
+                    "title": "Invalid Year",
+                    "desc": "Year can not exceed 2050 in your credit card expiry date."
+                }
+            },
+            "submit-ticket": {
+                "no-ticket": {
+                    "title": "No Ticket was Selected",
+                    "desc": "Please make sure to choose your match day ticket in Section 1."
+                },
+                "no-seat": {
+                    "title": "No Seat was Selected",
+                    "desc": "Please make sure to choose your seat in Section 2."
+                },
+                "invalid-name": {
+                    "title": "Invalid Name",
+                    "desc": "Please make sure to enter your name in Section 3."
+                },
+                "invalid-email": {
+                    "title": "Invalid Email",
+                    "desc": "Please make sure to enter your email in Section 3."
+                },
+                "invalid-credit": {
+                    "title": "Invalid Credit Card Number",
+                    "desc": "Please check your credit card number in Section 4."
+                },
+                "invalid-date": {
+                    "title": "Invalid expiry date for credit card",
+                    "desc": "Please check your credit card expiry date in Section 4."
+                },
+                "invalid-cvv": {
+                    "title": "Invalid CVV for credit card",
+                    "desc": "Please check your CVV code in Section 4."
+                },
+                "success": {
+                    "title": "Success!!",
+                    "desc": "You have successfully bought your ticket."
+                }
+            }
+        }
+    },
+    "stats": {
+        "title": "Canadian League Table",
+        "tb-row": {
+            "club": "Club",
+            "mp": "MP",
+            "pts": "Pts",
+            "w": "W",
+            "d": "D",
+            "l": "L",
+            "gf": "GF",
+            "ga": "GA"
+        },
+        "legend": {
+            "title": "Legend",
+            "mp": "(Matchs Played)",
+            "pts": "(Points)",
+            "w": "(Win)",
+            "d": "(Draw)",
+            "l": "(Lose)",
+            "gf": "(Goals For)",
+            "ga": "(Goals Against)"
+        }
+    },
+    "contact": {
+        "title": "Contact",
+        "email-section": {
+            "title": "Contact The Team managment",
+            "description": "If you have any questions about our trials for the youth team, or want to be a member in our fanbase to become the ultimate fan, with many more, please fill out your information and send us an email defining your enquiry. (We respond within 3 business days)",
+            "name": "Full Name",
+            "email":"Email Address",
+            "message": "Email message...",
+            "send": "Send Email"
+        },
+        "tweet-section": {
+            "title": "Poste In Our Twitter Profile",
+            "description": "Post a tweet in our official twitter account to share your opinions or send a feedback to our team. (Please note that every tweet is being monitred by our admin).",
+            "example": "@example",
+            "message": "Message...",
+            "tweet": "Tweet"
+        },
+        "alerts": {
+            "email-alerts": {
+                "invalid-name": {
+                    "title": "Invalid Name",
+                    "desc": "Please insert your Full Name in the requested field."
+                },
+                "invalid-email": {
+                    "title": "Invalid Email",
+                    "desc": "Please insert your Full Email in the requested field."
+                },
+                "invalid-message": {
+                    "title": "Invalid message in the email",
+                    "desc": "Please insert your message in the requested field."
+                },
+                "success": {
+                    "title": "Success!!",
+                    "desc": "Email is successfully sent to our team managment."
+                }
+            },
+            "twitter-alerts": {
+                "empty-id": {
+                    "title": "Empty Twitter ID",
+                    "desc": "Please insert your twitter ID in the requested field."
+                },
+                "invalid-id": {
+                    "title": "Invalid Twitter ID",
+                    "desc": "Please make sure you add the '@' at the begining of your twitter ID."
+                },
+                "invalid-message": {
+                    "title": "Invalid message",
+                    "desc": "Please enter a message in the text area."
+                },
+                "success": {
+                    "title": "Success!!",
+                    "desc": "Tweet is successfully sent to our twitter page."
+                }
+            }
+        }
+    }
+
+    
+}
